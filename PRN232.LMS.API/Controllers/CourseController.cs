@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PRN232.LMS.API.Helpers;
 using PRN232.LMS.API.Models.Responses;
@@ -21,7 +21,7 @@ namespace PRN232.LMS.API.Controllers
         [ProducesResponseType(typeof(BaseResponse<PagedResult<object>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseResponse<object>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetAllCourses(
+        public async Task<IActionResult> GetAllCoursesAsync(
             [FromQuery] string? search,
             [FromQuery] string? sort,
             [FromQuery] string? fields,
