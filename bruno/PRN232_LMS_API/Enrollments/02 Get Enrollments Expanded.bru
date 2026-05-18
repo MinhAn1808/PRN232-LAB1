@@ -1,0 +1,18 @@
+meta {
+  name: Get Enrollments Expanded
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/enrollments
+  body: none
+  auth: none
+}
+
+query {
+  expand: student,course
+  sort: -enrollDate
+  page: 1
+  pageSize: 10
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Update Student
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/students/{{studentId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "fullName": "Updated Student From Bruno",
+    "email": "updated.student@gmail.com",
+    "dateOfBirth": "2003-02-01T00:00:00"
+  }
+}

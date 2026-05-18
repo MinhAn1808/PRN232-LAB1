@@ -1,0 +1,19 @@
+meta {
+  name: Get Subjects
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/subjects
+  body: none
+  auth: none
+}
+
+query {
+  search: API
+  sort: subjectCode
+  page: 1
+  pageSize: 10
+  fields: subjectId,subjectCode,subjectName,credit
+}

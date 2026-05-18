@@ -1,0 +1,17 @@
+meta {
+  name: Get Students Expanded
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/students
+  body: none
+  auth: none
+}
+
+query {
+  expand: enrollments
+  page: 1
+  pageSize: 5
+}

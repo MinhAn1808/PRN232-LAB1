@@ -1,0 +1,17 @@
+meta {
+  name: Get Courses Expanded
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/courses
+  body: none
+  auth: none
+}
+
+query {
+  expand: semester
+  page: 1
+  pageSize: 10
+}
