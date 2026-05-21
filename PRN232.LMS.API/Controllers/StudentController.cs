@@ -246,6 +246,19 @@ namespace PRN232.LMS.API.Controllers
             });
         }
 
+        [HttpGet("test-500")]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult Test500()
+        {
+            return StatusCode(500, new BaseResponse<object>
+            {
+                Success = false,
+                Message = "Test 500 Internal Server Error",
+                Data = null,
+                Errors = null
+            });
+        }
+
         private static string ResolveSort(string? sort, string? sortBy, bool sortDescending)
         {
             if (!string.IsNullOrWhiteSpace(sort))
